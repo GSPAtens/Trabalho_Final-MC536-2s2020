@@ -16,4 +16,5 @@ Podem ser integrados dados que vão deste a registros de remissão e mortes caus
 
 título da base | link | breve descrição
 ----- | ----- | -----
-`<título da base>` | `<link para a página da base>` | `<breve descrição da base>`
+`CDC WONDER API for Data Query Web Service` | `https://wonder.cdc.gov/wonder/help/WONDER-API.html` | `CDC Wide-ranging ONline Data for Epidemiologic Research (CDC WONDER) is a public resource. This application makes many health-related data sets available to CDC staff, public health departments, researchers, and others. The data help with public health research, decision making, priority setting, program evaluation, and resource allocation.`
+`Tobacco Use 1995-2010` | `https://www.kaggle.com/cdc/tobacco-use` | `This dataset contains the prevalence and trends of tobacco use for 1995-2010. Percentages are weighted to population characteristics. Data are not available if it did not meet Behavioral Risk Factor Surveillance System (BRFSS) stability requirements. For more information on these requirements, as well as risk factors and calculated variables, see the Technical Documents and Survey Data for a specific year`
