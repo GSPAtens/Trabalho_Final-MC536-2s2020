@@ -2,7 +2,7 @@
 
 ## Slides da Proposta
 
-https://github.com/GSPAtens/Trabalho_Final-MC536-2s2020/blob/main/stage02/apresenta%C3%A7%C3%A3o.pdf
+[Slides](slides/presentation.pdf)
 ## Motivação e Contexto
 
 Por ser uma doença muito antiga e que afeta milhões de pessoas todos os dias, e consequentemente muito estudada, existe um grande volume de dados disponíveis que podem ser usados para ampliar o conhecimento sobre os diversos tipos de câncer. A análise de dados pode, então, ser aplicada para analisar este grande volume de dados.
@@ -16,5 +16,6 @@ Podem ser integrados dados que vão deste a registros de remissão e mortes caus
 
 Título da base | Link | Descrição
 ----- | ----- | -----
-`CDC WONDER API for Data Query Web Service` | `https://wonder.cdc.gov/wonder/help/WONDER-API.html` | `CDC Wide-ranging ONline Data for Epidemiologic Research (CDC WONDER) is a public resource. This application makes many health-related data sets available to CDC staff, public health departments, researchers, and others. The data help with public health research, decision making, priority setting, program evaluation, and resource allocation.`
-`Tobacco Use 1995-2010` | `https://www.kaggle.com/cdc/tobacco-use` | `This dataset contains the prevalence and trends of tobacco use for 1995-2010. Percentages are weighted to population characteristics. Data are not available if it did not meet Behavioral Risk Factor Surveillance System (BRFSS) stability requirements. For more information on these requirements, as well as risk factors and calculated variables, see the Technical Documents and Survey Data for a specific year`
+CDC WONDER API for Data Query Web Service | [Wonder API](https://wonder.cdc.gov/wonder/help/WONDER-API.html) | Mortalidade nos Estados Unidos |
+Tobacco Use 1995-2010 - Prevalence and Trends: Four Level Smoking Data | [Tobacco Use 1995-2010](https://www.kaggle.com/cdc/tobacco-use) | Registro do uso de tabaco de 1995 até 2010 por estado americano |
+Data from "An exploration of the Facebook social networks of smokers and non-smokers"  | [Social Networks of Smokers and Non-Smokers](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/XMPAUQ) | Parâmetros das contas do Facebook de fumantes e não fumantes
