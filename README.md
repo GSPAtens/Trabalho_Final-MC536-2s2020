@@ -1,4 +1,4 @@
-# Projeto: Análise Histórica da Incidência de Câncer
+# Projeto: Câncer de pulmão e tabagismo em tempos de mídias sociais
 
 ## Equipe: Dados de Bancos
 * Vitor Horodynski, RA 206953
@@ -7,6 +7,13 @@
 
 ## Resumo do Projeto
 
-Por meio dos registros de hospitalização e mortes de casos de câncer dos últimos anos, propõe-se estudar associações entre o estilo de vida de alguns grupos com a incidência de câncer. Com estas associações, pode-se também gerar maneiras de visualizar os dados que contribuam para aumentar o entendimento sobre o problema.
+Com o objetivo de estudar a presença do tabaco na sociedade e a relação entre o tabagismo e o câncer de pulmão, estabelecer relações entre a mortalidade por câncer de pulmão nos Estados Unidos e a presença do tabagismo em diversos estados norte-americanos que devem reproduzir a relação conhecida pela ciência. A partir desta fundamental relação entre doença e escolha de estilo de vida, conectar as características especiais das redes sociais de fumantes com a prática do tabagismo, o que deve possibilitar um certo entendimento da presença do tabaco na sociedade e como esta presença afeta a saúde pública.
 
-Podem ser integrados dados que vão deste a registros de remissão e mortes causadas pela doença, relacionamentos com eventos históricos e o comportamento hereditário da doença.
+## Estágios
+[Estágio 1]()
+
+
+[Estágio 2](/stage02)
+
+
+[Estágio 3](/stage03)

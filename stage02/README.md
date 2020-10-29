@@ -2,19 +2,27 @@
 
 ## Slides da Proposta
 
-https://github.com/GSPAtens/Trabalho_Final-MC536-2s2020/blob/main/stage02/apresenta%C3%A7%C3%A3o.pdf
+[Slides](slides/presentation.pdf)
+
 ## Motivação e Contexto
 
-Por ser uma doença muito antiga e que afeta milhões de pessoas todos os dias, e consequentemente muito estudada, existe um grande volume de dados disponíveis que podem ser usados para ampliar o conhecimento sobre os diversos tipos de câncer. A análise de dados pode, então, ser aplicada para analisar este grande volume de dados.
+Segundo o Center Disease Control (CDC), o câncer está atrás apenas de doenças cardiovasculares quando se trata do número de mortes. Além disso, o aumento da expectativa de vida média de um ser humano tem aumentado ainda mais o problema, já que a longevidade humana observada recentemente aumentou as chances de desenvolvimento de câncer em pacientes de mais idade principalmente.
+
+Dentre os diversos tipos de câncer observados e estudados, o que causa mais mortes todos os anos é o câncer de pulmão onde a maior causa é a prática do tabagismo. Apesar de que está relação de causalidade entre a escolha de fumar e a doença ser conhecida por muitos e alertada por profissionais de saúde, foram vendidos 5.7 trilhões de cigarros em 2016, indicando que muitas pessoas ainda praticam o tabagismo mesmo com o conhecimento de seus males para a saúde.
+
+Como se ainda não bastasse os efeitos do cigarro para a saúde, uma nova tendência de cigarros eletrônicos espalhada pelas mídias sociais conseguiu convencer jovens a começar a usar estes produtos. Apesar destes produtos serem vendidos como boas alternativas ao cigarro, já foram publicados estudos científicos que relacionam o uso destes com o câncer de pulmão, assim como acontece com o tabagismo tradicional.
 
 ## Método
 
-Por meio dos registros de hospitalização e mortes de casos de câncer dos últimos anos, propõe-se estudar associações entre o estilo de vida de alguns grupos com a incidência de câncer. Com estas associações, pode-se também gerar maneiras de visualizar os dados que contribuam para aumentar o entendimento sobre o problema.
+Para estudar a relação entre tabagismo, câncer de pulmão e as mídias sociais serão seguidas as duas seguintes etapas de projeto:
 
-Podem ser integrados dados que vão deste a registros de remissão e mortes causadas pela doença, relacionamentos com eventos históricos e o comportamento hereditário da doença.
+1. Relacionamento entre a mortalidade por câncer e o uso de tabaco: dados de mortalidade por câncer de pulmão da API CDC Wonder que pertencem ao modelo de documentos (hierárquico) serão relacionados com o uso de tabaco por estado americano e ano da tabela Tobacco Use (que pertence ao modelo tabular - consultar bases de dados abaixo) para reproduzir a relação já conhecida entre ambas as partes. A análise será feita relacionando-se o número de mortes por câncer de pulmão em um determinado ano com os números de fumantes no ano atual e em anos anteriores por estado norte-americano. Espera-se concluir que mortes por câncer de pulmão são correlacionados com o uso de tabaco e fundamentar a pesquisa desta relação.
+2. Relacionar a conectividade das redes sociais de fumantes pelos dados de contas do Facebook (que pertencem ao modelo de grafos) com o indíce de tabagismo em diversos estados americanos pela base de dados Tobacco Use (modelo tabular). A partir da análise conjunta entre estas duas bases de dados, espera-se concluir que a conectividade das redes sociais de tabagistas formam uma correlação proporcional com a prática de tabagismo em um nível nacional norte-americano.
+
 ## Bases de Dados
 
 Título da base | Link | Descrição
 ----- | ----- | -----
-`CDC WONDER API for Data Query Web Service` | `https://wonder.cdc.gov/wonder/help/WONDER-API.html` | `CDC Wide-ranging ONline Data for Epidemiologic Research (CDC WONDER) is a public resource. This application makes many health-related data sets available to CDC staff, public health departments, researchers, and others. The data help with public health research, decision making, priority setting, program evaluation, and resource allocation.`
-`Tobacco Use 1995-2010` | `https://www.kaggle.com/cdc/tobacco-use` | `This dataset contains the prevalence and trends of tobacco use for 1995-2010. Percentages are weighted to population characteristics. Data are not available if it did not meet Behavioral Risk Factor Surveillance System (BRFSS) stability requirements. For more information on these requirements, as well as risk factors and calculated variables, see the Technical Documents and Survey Data for a specific year`
+CDC WONDER API for Data Query Web Service | [Wonder API](https://wonder.cdc.gov/wonder/help/WONDER-API.html) | Mortalidade nos Estados Unidos |
+Tobacco Use 1995-2010 - Prevalence and Trends: Four Level Smoking Data | [Tobacco Use 1995-2010](https://www.kaggle.com/cdc/tobacco-use) | Registro do uso de tabaco de 1995 até 2010 por estado americano |
+Data from "An exploration of the Facebook social networks of smokers and non-smokers"  | [Social Networks of Smokers and Non-Smokers](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/XMPAUQ) | Parâmetros das contas do Facebook de fumantes e não fumantes
