@@ -42,25 +42,26 @@ O conjunto de chave primárias das duas tabelas é parecido, mas a tabela Tabagi
 ### Considerações de normalização:
 Nenhuma destas duas tabelas dos modelo lógico estão normalizada, por conta dos seguintes motivos:
 
-    1. Na tabela Mortalidade, o campo Estado define o campo CodigoEstado e os campos populção e mortes combinados definem o campo MortesPor100k por meio de uma relação aritmética simples (Mortes/População*100000).
-    2. Já na tabela Tabagismo, o campo Estado é redundante com o campo Coordenadas.
+1. Na tabela Mortalidade, o campo Estado define o campo CodigoEstado e os campos populção e mortes combinados definem o campo MortesPor100k por meio de uma relação aritmética simples (Mortes/População*100000).
+2. Pelo esquema da tabela Tabagismo, o campo Estado é redundante com o campo Coordenadas.
 
 ### Programa de extração e conversão de dados:
+Conversão de dados baixados pelo formulário da API (extração manual): [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GSPAtens/Trabalho_Final-MC536-2s2020/development?filepath=stage03%2Fnotebooks%2Flungcancerdataconverter.ipynb)
 
-
+Extração e conversão de dados XML usando a API: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GSPAtens/Trabalho_Final-MC536-2s2020/development?filepath=stage03%2Fnotebooks%2Flungcancerdataextraction.ipynb)
 
 ### Conjunto de queries:
 
 
 
 ### Arquivos relacionais:
-[Mortes por câncer de Pulmão nos EUA de 1968 a 1978, por ano e por estado.](data/lungcancer1968-1978.csv)
+[Mortes por câncer de pulmão nos EUA de 1968 a 1978, por ano e por estado.](data/lungcancer1968-1978.csv)
 
-[Mortes por câncer de Pulmão nos EUA de 1979 a 1998, por ano e por estado.](data/lungcancer1979-1998.csv)
+[Mortes por câncer de pulmão nos EUA de 1979 a 1998, por ano e por estado.](data/lungcancer1979-1998.csv)
 
-[Mortes por câncer de Pulmão nos EUA de 1999 a 2018, por ano e por estado.](data/lungcancer1999-2018.csv)
+[Mortes por câncer de pulmão nos EUA de 1999 a 2018, por ano e por estado.](data/lungcancer1999-2018.csv)
 
-[Mortes por câncer de Pulmão nos EUA de 1968 a 2018, por ano e por estado.](data/lungcancer.csv)
+[Mortes por câncer de pulmão nos EUA de 1968 a 2018, por ano e por estado.](data/lungcancer.csv)
 
-[Mortes por câncer de Pulmão nos EUA de 1968 a 2018, por ano.](data/lungcancer-general.csv)
+[Mortes por câncer de pulmão nos EUA de 1968 a 2018, por ano.](data/lungcancer-general.csv)
 
