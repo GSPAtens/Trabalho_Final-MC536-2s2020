@@ -1,0 +1,1480 @@
+2020-11-03 16:20:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "MORTALIDADE.ANO" must be in the GROUP BY list; SQL statement:
+SELECT * FROM Mortalidade
+GROUP BY Estado [90016-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:172)
+	at org.h2.command.dml.Select$LazyResultGroupSorted.fetchNextRow(Select.java:1515)
+	at org.h2.result.LazyResult.hasNext(LazyResult.java:79)
+	at org.h2.result.LazyResult.next(LazyResult.java:59)
+	at org.h2.command.dml.Select.queryGroupSorted(Select.java:194)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:626)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:242)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:232)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 16:30:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "ANO" must be in the GROUP BY list; SQL statement:
+SELECT Ano,Estado,COUNT(Mortes)
+FROM Mortalidade
+GROUP BY Mortes [90016-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:172)
+	at org.h2.command.dml.Select.queryGroup(Select.java:350)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:628)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:242)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:232)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 16:30:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "ESTADO" must be in the GROUP BY list; SQL statement:
+SELECT Ano,Estado,COUNT(Mortes)
+FROM Mortalidade
+GROUP BY Ano,Mortes [90016-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:172)
+	at org.h2.command.dml.Select.queryGroup(Select.java:350)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:628)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:242)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:232)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 16:34:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ANO,ESTADO COUNT([*]*)
+FROM MORTALIDADE
+GROUP BY ANO,ESTADO "; SQL statement:
+SELECT Ano,Estado COUNT(*)
+FROM Mortalidade
+GROUP BY Ano,Estado [42000-197]
+2020-11-03 16:35:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "MORTALIDADE.MORTES" must be in the GROUP BY list; SQL statement:
+SELECT Mortalidade.mortes, COUNT(*)
+FROM Mortalidade
+GROUP BY Ano [90016-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:172)
+	at org.h2.command.dml.Select.queryGroup(Select.java:350)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:628)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:242)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:232)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 16:35:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Schema "MORTALIDADE" not found; SQL statement:
+SELECT COUNT(*)
+FROM Mortalidade.mortes
+GROUP BY Ano [90079-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.Parser.getSchema(Parser.java:701)
+	at org.h2.command.Parser.getSchema(Parser.java:707)
+	at org.h2.command.Parser.readTableFilter(Parser.java:1388)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:2138)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2287)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2133)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1946)
+	at org.h2.command.Parser.parseSelect(Parser.java:1919)
+	at org.h2.command.Parser.parsePrepared(Parser.java:463)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:190)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 16:36:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SUM(*[*])
+FROM MORTALIDADE
+GROUP BY ANO,ESTADO "; expected "DISTINCT, NOT, EXISTS, INTERSECTS, SELECT, FROM, WITH"; SQL statement:
+SELECT SUM(*)
+FROM Mortalidade
+GROUP BY Ano,Estado [42001-197]
+2020-11-03 16:44:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "ANO" must be in the GROUP BY list; SQL statement:
+SELECT Estado,Ano,AVG(Mortes100k) avg_mortes100k
+FROM Mortalidade
+GROUP BY Estado
+ORDER BY avg_mortes100k DESC
+LIMIT 5 [90016-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:172)
+	at org.h2.command.dml.Select$LazyResultGroupSorted.fetchNextRow(Select.java:1515)
+	at org.h2.result.LazyResult.hasNext(LazyResult.java:79)
+	at org.h2.result.LazyResult.next(LazyResult.java:59)
+	at org.h2.command.dml.Select.queryGroupSorted(Select.java:194)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:626)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:242)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:232)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 16:44:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ANO,SUM(MORTES) TOTAL DE[*] MORTES
+FROM MORTALIDADE
+GROUP BY ANO
+ORDER BY AVG_MORTES100K DESC
+LIMIT 10 "; SQL statement:
+SELECT Ano,SUM(mortes) Total de Mortes
+FROM Mortalidade
+GROUP BY Ano
+ORDER BY avg_mortes100k DESC
+LIMIT 10 [42000-197]
+2020-11-03 16:44:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "AVG_MORTES100K" not found; SQL statement:
+SELECT Ano,SUM(mortes) TotaldeMortes
+FROM Mortalidade
+GROUP BY Ano
+ORDER BY avg_mortes100k DESC
+LIMIT 10 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.command.dml.Select.prepare(Select.java:858)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:190)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 16:44:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "AVG_MORTES100K" not found; SQL statement:
+SELECT Ano,SUM(mortes) TotaldeMortes
+FROM Mortalidade
+GROUP BY Ano
+ORDER BY avg_mortes100k DESC
+LIMIT 10 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.command.dml.Select.prepare(Select.java:858)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:190)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 16:44:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "AVG_MORTES100K" not found; SQL statement:
+SELECT Ano,SUM(mortes) total
+FROM Mortalidade
+GROUP BY Ano
+ORDER BY avg_mortes100k DESC
+LIMIT 10 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.command.dml.Select.prepare(Select.java:858)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:190)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 16:46:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "ANO" must be in the GROUP BY list; SQL statement:
+SELECT Ano,SUM(mortes),sum(população)
+from mortalidade
+group by estado [90016-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:172)
+	at org.h2.command.dml.Select$LazyResultGroupSorted.fetchNextRow(Select.java:1515)
+	at org.h2.result.LazyResult.hasNext(LazyResult.java:79)
+	at org.h2.result.LazyResult.next(LazyResult.java:59)
+	at org.h2.command.dml.Select.queryGroupSorted(Select.java:194)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:626)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:242)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:232)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 16:46:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "ANO" must be in the GROUP BY list; SQL statement:
+SELECT Ano,SUM(mortes),sum(população)
+from mortalidade [90016-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:172)
+	at org.h2.command.dml.Select.queryGroup(Select.java:350)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:628)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:242)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:232)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 16:46:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "ANO" must be in the GROUP BY list; SQL statement:
+SELECT Ano,SUM(mortes),sum(população)
+from mortalidade [90016-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:172)
+	at org.h2.command.dml.Select.queryGroup(Select.java:350)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:628)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:242)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:232)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 16:47:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "ANO" must be in the GROUP BY list; SQL statement:
+SELECT Ano,SUM(Mortes),sum(População)
+FROM Mortalidade
+GROUP BY Estado [90016-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:172)
+	at org.h2.command.dml.Select$LazyResultGroupSorted.fetchNextRow(Select.java:1515)
+	at org.h2.result.LazyResult.hasNext(LazyResult.java:79)
+	at org.h2.result.LazyResult.next(LazyResult.java:59)
+	at org.h2.command.dml.Select.queryGroupSorted(Select.java:194)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:626)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:242)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:232)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 16:49:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "MTOTAL" not found; SQL statement:
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal, Mtotal/Ptotal
+FROM Mortalidade
+GROUP BY Ano
+ORDER BY ANO ASC [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Operation.optimize(Operation.java:183)
+	at org.h2.command.dml.Select.prepare(Select.java:858)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:190)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 16:54:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "MTOTAL" not found; SQL statement:
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal,CAST (Mtotal AS DECIMAL)/Ptotal*100000 AS Mortes100k
+FROM Mortalidade
+GROUP BY Ano
+ORDER BY ANO ASC [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Function.optimize(Function.java:2131)
+	at org.h2.expression.Operation.optimize(Operation.java:183)
+	at org.h2.expression.Operation.optimize(Operation.java:183)
+	at org.h2.expression.Alias.optimize(Alias.java:51)
+	at org.h2.command.dml.Select.prepare(Select.java:858)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:190)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 16:55:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "ORDER[*] BY MORTES100K ASC "; SQL statement:
+ORDER BY Mortes100k ASC [42000-197]
+2020-11-03 17:42:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT AVG(CAST (MTOTAL AS DECIMAL)/PTOTAL*100000 MORTES100K[*])
+FROM(
+
+SELECT ANO,SUM(MORTES) MTOTAL,SUM(POPULAÇÃO) PTOTAL
+FROM MORTALIDADE
+GROUP BY ANO
+
+)
+LIMIT 10 "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, )"; SQL statement:
+SELECT AVG(CAST (Mtotal AS DECIMAL)/Ptotal*100000 Mortes100k)
+FROM(
+
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+
+)
+LIMIT 10 [42001-197]
+2020-11-03 17:42:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT AVG(CAST (MTOTAL AS DECIMAL)/PTOTAL*100000 MORTES100K[*])
+FROM(
+
+SELECT ANO,SUM(MORTES) MTOTAL,SUM(POPULAÇÃO) PTOTAL
+FROM MORTALIDADE
+GROUP BY ANO
+
+) "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, )"; SQL statement:
+SELECT AVG(CAST (Mtotal AS DECIMAL)/Ptotal*100000 Mortes100k)
+FROM(
+
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+
+) [42001-197]
+2020-11-03 17:42:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT AVG(CAST (MTOTAL AS DECIMAL)/PTOTAL*100000 MORTES100K[*])
+FROM(
+
+SELECT ANO,SUM(MORTES) MTOTAL,SUM(POPULAÇÃO) PTOTAL
+FROM MORTALIDADE
+GROUP BY ANO
+
+)
+GROUP BY ANO "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, )"; SQL statement:
+SELECT AVG(CAST (Mtotal AS DECIMAL)/Ptotal*100000 Mortes100k)
+FROM(
+
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+
+)
+GROUP BY Ano [42001-197]
+2020-11-03 17:43:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ANO,AVG(CAST (MTOTAL AS DECIMAL)/PTOTAL*100000 MORTES100K[*])
+FROM(
+
+SELECT ANO,SUM(MORTES) MTOTAL,SUM(POPULAÇÃO) PTOTAL
+FROM MORTALIDADE
+GROUP BY ANO
+
+)
+GROUP BY ANO "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, )"; SQL statement:
+SELECT Ano,AVG(CAST (Mtotal AS DECIMAL)/Ptotal*100000 Mortes100k)
+FROM(
+
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+
+)
+GROUP BY Ano [42001-197]
+2020-11-03 17:47:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ESTADO,AVG(MORTES100K) AVG_MORTES100K
+FROM
+MORTALIDADE AS M,
+(SELECT ANO,MTOTAL,PTOTAL,CAST (MTOTAL AS DECIMAL)/PTOTAL*100000 MORTES100K
+FROM(
+
+SELECT ANO,SUM(MORTES) MTOTAL,SUM(POPULAÇÃO) PTOTAL
+FROM MORTALIDADE
+GROUP BY ANO
+)
+) AS N,
+WHERE[*] N.MORTES100K > AVG_MORTES100K "; expected "identifier"; SQL statement:
+SELECT Estado,AVG(Mortes100k) avg_mortes100k
+FROM
+Mortalidade AS M,
+(SELECT Ano,Mtotal,Ptotal,CAST (Mtotal AS DECIMAL)/Ptotal*100000 Mortes100k
+FROM(
+
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+)
+) AS N,
+WHERE N.mortes100k > avg_mortes100k [42001-197]
+2020-11-03 17:47:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Ambiguous column name "MORTES100K"; SQL statement:
+SELECT Estado,AVG(Mortes100k) avg_mortes100k
+FROM
+Mortalidade AS M,
+(SELECT Ano,Mtotal,Ptotal,CAST (Mtotal AS DECIMAL)/Ptotal*100000 Mortes100k
+FROM(
+
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+)
+) AS N
+WHERE N.mortes100k > avg_mortes100k [90059-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:127)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:97)
+	at org.h2.expression.Aggregate.mapColumns(Aggregate.java:439)
+	at org.h2.expression.Alias.mapColumns(Alias.java:46)
+	at org.h2.command.dml.Select.mapColumns(Select.java:1237)
+	at org.h2.command.dml.Select.init(Select.java:826)
+	at org.h2.command.Parser.parseSelect(Parser.java:1925)
+	at org.h2.command.Parser.parsePrepared(Parser.java:463)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:190)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 17:48:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Ambiguous column name "MORTES100K"; SQL statement:
+SELECT Estado,AVG(Mortes100k) avg_mortes100k
+FROM
+Mortalidade AS M,
+(SELECT Ano,Mtotal,Ptotal,CAST (Mtotal AS DECIMAL)/Ptotal*100000 Mortes100k
+FROM(
+
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+)
+) AS N
+WHERE N.Mortes100k > AVG(Mortes100k) [90059-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:127)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:97)
+	at org.h2.expression.Aggregate.mapColumns(Aggregate.java:439)
+	at org.h2.expression.Alias.mapColumns(Alias.java:46)
+	at org.h2.command.dml.Select.mapColumns(Select.java:1237)
+	at org.h2.command.dml.Select.init(Select.java:826)
+	at org.h2.command.Parser.parseSelect(Parser.java:1925)
+	at org.h2.command.Parser.parsePrepared(Parser.java:463)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:190)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 17:52:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "N.MORTES100K" not found; SQL statement:
+SELECT Estado,AVG(Mortes100k) avg_mortes100k
+FROM
+Mortalidade
+WHERE
+N.Mortes100k > (SELECT AVG(CAST (Mtotal AS DECIMAL)/Ptotal*100000)
+FROM(
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+))
+GROUP BY Estado
+ORDER BY avg_mortes100k DESC
+LIMIT 5 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Select.prepare(Select.java:861)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:190)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 17:53:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "MORTES100K" must be in the GROUP BY list; SQL statement:
+SELECT Estado,AVG(Mortes100k) avg_mortes100k
+FROM
+Mortalidade
+WHERE
+Mortalidade.Mortes100k > (SELECT AVG(CAST (Mtotal AS DECIMAL)/Ptotal*100000)
+FROM(
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+))
+GROUP BY Estado
+ORDER BY Mortes100k [90016-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:172)
+	at org.h2.command.dml.Select$LazyResultGroupSorted.fetchNextRow(Select.java:1515)
+	at org.h2.result.LazyResult.hasNext(LazyResult.java:79)
+	at org.h2.result.LazyResult.next(LazyResult.java:59)
+	at org.h2.command.dml.Select.queryGroupSorted(Select.java:194)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:626)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:242)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:232)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 17:53:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "MORTES100K" must be in the GROUP BY list; SQL statement:
+SELECT Estado,AVG(Mortes100k) avg_mortes100k
+FROM
+Mortalidade
+WHERE
+Mortalidade.Mortes100k > (SELECT AVG(CAST (Mtotal AS DECIMAL)/Ptotal*100000)
+FROM(
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+))
+ORDER BY Mortes100k [90016-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:172)
+	at org.h2.command.dml.Select.queryGroup(Select.java:350)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:628)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:242)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:232)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 17:53:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "N.MORTES100K" not found; SQL statement:
+SELECT Estado,AVG(Mortes100k) avg_mortes100k
+FROM
+Mortalidade
+WHERE
+N.Mortes100k > (SELECT AVG(CAST (Mtotal AS DECIMAL)/Ptotal*100000)
+FROM(
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+))
+GROUP BY Estado [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Select.prepare(Select.java:861)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:190)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 17:54:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "AVG_MORTES100K" not found; SQL statement:
+SELECT Estado,AVG(Mortes100k) avg_mortes100k
+FROM
+Mortalidade
+WHERE
+avg_mortes100k > (SELECT AVG(CAST (Mtotal AS DECIMAL)/Ptotal*100000)
+FROM(
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+)) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Select.prepare(Select.java:861)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:190)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 17:54:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "AVG_MORTES100K" not found; SQL statement:
+SELECT Estado,AVG(Mortes100k) avg_mortes100k
+FROM
+Mortalidade
+WHERE
+avg_mortes100k > (SELECT AVG(CAST (Mtotal AS DECIMAL)/Ptotal*100000)
+FROM(
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+))
+GROUP BY Estado [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Select.prepare(Select.java:861)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:190)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 17:55:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "AVG_MORTES100K" not found; SQL statement:
+SELECT Estado,AVG(Mortes100k) avg_mortes100k
+FROM
+Mortalidade
+WHERE
+avg_mortes100k > (SELECT AVG(CAST (Mtotal AS DECIMAL)/Ptotal*100000)
+FROM(
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+))
+GROUP BY Mortalidade.Estado [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Select.prepare(Select.java:861)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:190)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 17:55:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "ESTADO" must be in the GROUP BY list; SQL statement:
+SELECT Estado,AVG(Mortes100k) avg_mortes100k
+FROM
+Mortalidade
+WHERE
+Mortalidade.Mortes100k > (SELECT
+AVG(CAST (Mtotal AS DECIMAL)/Ptotal*100000)
+FROM(
+
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+
+)) [90016-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:172)
+	at org.h2.command.dml.Select.queryGroup(Select.java:350)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:628)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:242)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:232)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 17:55:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "N.MORTES100K" not found; SQL statement:
+SELECT Estado,AVG(Mortes100k) avg_mortes100k
+FROM
+Mortalidade
+WHERE
+N.Mortes100k > (SELECT AVG(CAST (Mtotal AS DECIMAL)/Ptotal*100000)
+FROM(
+
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+
+)) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Select.prepare(Select.java:861)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:190)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 17:57:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Invalid use of aggregate function "AVG(MORTALIDADE.MORTES100K)"; SQL statement:
+SELECT Estado
+FROM
+Mortalidade
+WHERE
+AVG(Mortalidade.Mortes100k) > (SELECT AVG(CAST (Mtotal AS DECIMAL)/Ptotal*100000)
+FROM(
+
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+
+))
+GROUP BY Estado [90054-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.Aggregate.getValue(Aggregate.java:368)
+	at org.h2.expression.Comparison.getValue(Comparison.java:239)
+	at org.h2.expression.Expression.getBooleanValue(Expression.java:178)
+	at org.h2.command.dml.Select.isConditionMet(Select.java:312)
+	at org.h2.command.dml.Select$LazyResultGroupSorted.fetchNextRow(Select.java:1491)
+	at org.h2.result.LazyResult.hasNext(LazyResult.java:79)
+	at org.h2.result.LazyResult.next(LazyResult.java:59)
+	at org.h2.command.dml.Select.queryGroupSorted(Select.java:194)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:626)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:242)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:232)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 17:57:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Invalid use of aggregate function "AVG(MORTALIDADE.MORTES100K)"; SQL statement:
+SELECT Estado
+FROM
+Mortalidade
+WHERE
+AVG(Mortalidade.Mortes100k) > (SELECT AVG(CAST (Mtotal AS DECIMAL)/Ptotal*100000)
+FROM(
+
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+
+)) [90054-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.Aggregate.getValue(Aggregate.java:368)
+	at org.h2.expression.Comparison.getValue(Comparison.java:239)
+	at org.h2.expression.Expression.getBooleanValue(Expression.java:178)
+	at org.h2.command.dml.Select.isConditionMet(Select.java:312)
+	at org.h2.command.dml.Select.queryGroup(Select.java:325)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:628)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:242)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:232)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 17:58:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "AVG_MORTES100K" not found; SQL statement:
+SELECT Estado,AVG(Mortes100k) avg_mortes100k
+FROM Mortalidade
+WHERE avg_mortes100k > 10
+GROUP BY Estado
+ORDER BY avg_mortes100k DESC
+LIMIT 5 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Select.prepare(Select.java:861)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:190)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 17:58:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "AVG_MORTES100K" not found; SQL statement:
+SELECT Estado,AVG(Mortes100k) avg_mortes100k
+FROM Mortalidade
+WHERE avg_mortes100k > 10
+GROUP BY Estado
+ORDER BY avg_mortes100k DESC
+LIMIT 5 [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:177)
+	at org.h2.command.dml.Select.prepare(Select.java:861)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:190)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 17:59:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT X.ESTADO
+
+FROM(
+SELECT ESTADO,AVG(MORTES100K) AVG_MORTES100K
+FROM MORTALIDADE
+GROUP BY ESTADO
+ORDER BY AVG_MORTES100K DESC
+LIMIT 5 AS[*] X) "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, OFFSET, ,, SAMPLE_SIZE, FOR, )"; SQL statement:
+SELECT x.Estado
+
+FROM(
+SELECT Estado,AVG(Mortes100k) avg_mortes100k
+FROM Mortalidade
+GROUP BY Estado
+ORDER BY avg_mortes100k DESC
+LIMIT 5 as x) [42001-197]
+2020-11-03 17:59:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT *
+
+FROM
+SELECT[*] ESTADO,AVG(MORTES100K) AVG_MORTES100K
+FROM MORTALIDADE
+GROUP BY ESTADO
+ORDER BY AVG_MORTES100K DESC
+LIMIT 5 AS X "; expected "identifier"; SQL statement:
+SELECT *
+
+FROM
+SELECT Estado,AVG(Mortes100k) avg_mortes100k
+FROM Mortalidade
+GROUP BY Estado
+ORDER BY avg_mortes100k DESC
+LIMIT 5 as x [42001-197]
+2020-11-03 18:01:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "Y" not found; SQL statement:
+SELECT *
+
+FROM
+(SELECT Estado,AVG(Mortes100k) avg_mortes100k
+FROM Mortalidade
+GROUP BY Estado) as x,
+
+(SELECT AVG(CAST (Mtotal AS DECIMAL)/Ptotal*100000)
+FROM(
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+)) as y
+WHERE x.avg_mortes100k > y [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:179)
+	at org.h2.command.dml.Select.prepare(Select.java:861)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:190)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 18:02:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "Y" not found; SQL statement:
+SELECT x.avg_mortes100k,y
+
+FROM
+(SELECT Estado,AVG(Mortes100k) avg_mortes100k
+FROM Mortalidade
+GROUP BY Estado) as x,
+
+(SELECT AVG(CAST (Mtotal AS DECIMAL)/Ptotal*100000)
+FROM(
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+)) as y [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.command.dml.Select.prepare(Select.java:858)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:190)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 18:03:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "Y" not found; SQL statement:
+SELECT x.avg_mortes100k,y
+
+FROM
+(SELECT Estado,AVG(Mortes100k) avg_mortes100k
+FROM Mortalidade
+GROUP BY Estado) as x,
+
+(SELECT AVG(CAST (Mtotal AS DECIMAL)/Ptotal*100000)
+FROM(
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+)) as y [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.command.dml.Select.prepare(Select.java:858)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:190)
+	at com.twosigma.beakerx.sql.QueryExecutor.executeQuery(QueryExecutor.java:113)
+	at com.twosigma.beakerx.sql.evaluator.SQLEvaluator.executeQuery(SQLEvaluator.java:257)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:48)
+	at com.twosigma.beakerx.sql.evaluator.SQLCodeRunner.call(SQLCodeRunner.java:30)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:745)
+2020-11-03 18:03:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "(SELECT AVG(CAST (MTOTAL AS DECIMAL)/PTOTAL*100000)
+FROM(
+SELECT ANO,SUM(MORTES) MTOTAL,SUM(POPULAÇÃO) PTOTAL
+FROM MORTALIDADE
+GROUP BY ANO
+)) AS[*] Y "; SQL statement:
+(SELECT AVG(CAST (Mtotal AS DECIMAL)/Ptotal*100000)
+FROM(
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+)) as y [42000-197]
+2020-11-03 18:03:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "(SELECT AVG(CAST (MTOTAL AS DECIMAL)/PTOTAL*100000)
+FROM(
+SELECT ANO,SUM(MORTES) MTOTAL,SUM(POPULAÇÃO) PTOTAL
+FROM MORTALIDADE
+GROUP BY ANO) [*]"; expected "USE, AS, (, USE, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, WHERE, GROUP, HAVING, UNION, MINUS, EXCEPT, INTERSECT, ORDER, OFFSET, FETCH, LIMIT, FOR, )"; SQL statement:
+(SELECT AVG(CAST (Mtotal AS DECIMAL)/Ptotal*100000)
+FROM(
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano) [42001-197]
+2020-11-03 18:11:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MORTALIDADE.ANO,MORTALIDADE.ESTADO
+FROM
+MORTALIDADE,
+(SELECT ANO,MTOTAL,PTOTAL,CAST (MTOTAL AS DECIMAL)/PTOTAL*100000 MORTES100K
+FROM(
+
+SELECT ANO,SUM(MORTES) MTOTAL,SUM(POPULAÇÃO) PTOTAL
+FROM MORTALIDADE
+GROUP BY ANO
+
+) AS NACIONAL
+WHERE MORTALIDADE.ANO = NACIONAL.ANO AND MORTALIDADE.MORTES100K > NACIONAL.MORTES100K [*]"; expected "(, ., [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, GROUP, HAVING, UNION, MINUS, EXCEPT, INTERSECT, ORDER, OFFSET, FETCH, LIMIT, FOR, )"; SQL statement:
+SELECT Mortalidade.Ano,Mortalidade.Estado
+FROM
+Mortalidade,
+(SELECT Ano,Mtotal,Ptotal,CAST (Mtotal AS DECIMAL)/Ptotal*100000 Mortes100k
+FROM(
+
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+
+) AS Nacional
+WHERE Mortalidade.Ano = Nacional.Ano AND Mortalidade.Mortes100k > Nacional.Mortes100k [42001-197]
+2020-11-03 18:11:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MORTALIDADE.ANO,MORTALIDADE.ESTADO
+FROM
+MORTALIDADE,
+(SELECT ANO,MTOTAL,PTOTAL,CAST (MTOTAL AS DECIMAL)/PTOTAL*100000 Z
+FROM(
+
+SELECT ANO,SUM(MORTES) MTOTAL,SUM(POPULAÇÃO) PTOTAL
+FROM MORTALIDADE
+GROUP BY ANO
+
+) AS NACIONAL
+WHERE MORTALIDADE.ANO = NACIONAL.ANO AND MORTALIDADE.MORTES100K > NACIONAL.Z [*]"; expected "(, ., [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, GROUP, HAVING, UNION, MINUS, EXCEPT, INTERSECT, ORDER, OFFSET, FETCH, LIMIT, FOR, )"; SQL statement:
+SELECT Mortalidade.Ano,Mortalidade.Estado
+FROM
+Mortalidade,
+(SELECT Ano,Mtotal,Ptotal,CAST (Mtotal AS DECIMAL)/Ptotal*100000 z
+FROM(
+
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+
+) AS Nacional
+WHERE Mortalidade.Ano = Nacional.Ano AND Mortalidade.Mortes100k > Nacional.z [42001-197]
+2020-11-03 18:11:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MORTALIDADE.ANO,MORTALIDADE.ESTADO
+FROM
+MORTALIDADE,
+(SELECT ANO,MTOTAL,PTOTAL,CAST (MTOTAL AS DECIMAL)/PTOTAL*100000 Z
+FROM(
+
+SELECT ANO,SUM(MORTES) MTOTAL,SUM(POPULAÇÃO) PTOTAL
+FROM MORTALIDADE
+GROUP BY ANO
+
+) AS NACIONAL
+WHERE MORTALIDADE.ANO = NACIONAL.ANO [*]"; expected "(, ., [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, GROUP, HAVING, UNION, MINUS, EXCEPT, INTERSECT, ORDER, OFFSET, FETCH, LIMIT, FOR, )"; SQL statement:
+SELECT Mortalidade.Ano,Mortalidade.Estado
+FROM
+Mortalidade,
+(SELECT Ano,Mtotal,Ptotal,CAST (Mtotal AS DECIMAL)/Ptotal*100000 z
+FROM(
+
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+
+) AS Nacional
+WHERE Mortalidade.Ano = Nacional.Ano [42001-197]
+2020-11-03 18:12:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MORTALIDADE.ANO,MORTALIDADE.ESTADO
+FROM
+MORTALIDADE,
+(SELECT ANO,MTOTAL,PTOTAL,CAST (MTOTAL AS DECIMAL)/PTOTAL*100000 Z
+FROM(
+
+SELECT ANO,SUM(MORTES) MTOTAL,SUM(POPULAÇÃO) PTOTAL
+FROM MORTALIDADE
+GROUP BY ANO
+
+) AS NACIONAL [*]"; expected "(, USE, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, WHERE, GROUP, HAVING, UNION, MINUS, EXCEPT, INTERSECT, ORDER, OFFSET, FETCH, LIMIT, FOR, )"; SQL statement:
+SELECT Mortalidade.Ano,Mortalidade.Estado
+FROM
+Mortalidade,
+(SELECT Ano,Mtotal,Ptotal,CAST (Mtotal AS DECIMAL)/Ptotal*100000 z
+FROM(
+
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+
+) AS Nacional [42001-197]
+2020-11-03 18:12:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT *
+FROM
+MORTALIDADE,
+(SELECT ANO,MTOTAL,PTOTAL,CAST (MTOTAL AS DECIMAL)/PTOTAL*100000 Z
+FROM(
+
+SELECT ANO,SUM(MORTES) MTOTAL,SUM(POPULAÇÃO) PTOTAL
+FROM MORTALIDADE
+GROUP BY ANO
+
+) AS X [*]"; expected "(, USE, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, WHERE, GROUP, HAVING, UNION, MINUS, EXCEPT, INTERSECT, ORDER, OFFSET, FETCH, LIMIT, FOR, )"; SQL statement:
+SELECT *
+FROM
+Mortalidade,
+(SELECT Ano,Mtotal,Ptotal,CAST (Mtotal AS DECIMAL)/Ptotal*100000 z
+FROM(
+
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+
+) AS x [42001-197]
+2020-11-03 18:14:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MORTALIDADE.ANO, MORTALIDADE.ESTADO, MORTALIDADE.MORTES100K,
+FROM
+MORTALIDADE,
+(SELECT ANO,MTOTAL,PTOTAL,CAST (MTOTAL AS DECIMAL)/PTOTAL*100000 Z
+FROM(
+
+SELECT ANO,SUM(MORTES) MTOTAL,SUM(POPULAÇÃO) PTOTAL
+FROM MORTALIDADE
+GROUP BY ANO
+
+)) AS NACIONAL
+WHERE[*] MORTALIDADE.ANO = NACIONAL.ANO AND MORTALIDADE.MORTES100K > NACIONAL.Z "; expected "(, USE, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"; SQL statement:
+SELECT Mortalidade.Ano, Mortalidade.Estado, Mortalidade.mortes100k,
+FROM
+Mortalidade,
+(SELECT Ano,Mtotal,Ptotal,CAST (Mtotal AS DECIMAL)/Ptotal*100000 z
+FROM(
+
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano
+
+)) AS Nacional
+WHERE Mortalidade.Ano = Nacional.Ano and Mortalidade.mortes100k > Nacional.z [42001-197]
+2020-11-03 18:27:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT M.ESTADO
+
+FROM
+(SELECT ESTADO,AVG(MORTES100K) AVG_MORTES100K
+FROM MORTALIDADE
+GROUP BY ESTADO) AS M
+WHERE
+M.ANO > 1999
+M[*].AVG_MORTES100K > (SELECT AVG(CAST (MTOTAL AS DECIMAL)/PTOTAL*100000)
+FROM(
+SELECT ANO,SUM(MORTES) MTOTAL,SUM(POPULAÇÃO) PTOTAL
+WHERE ANO > 1999
+FROM MORTALIDADE
+GROUP BY ANO)
+) "; SQL statement:
+SELECT M.Estado
+
+FROM
+(SELECT Estado,AVG(Mortes100k) avg_mortes100k
+FROM Mortalidade
+GROUP BY Estado) as M
+WHERE
+M.ano > 1999
+M.avg_mortes100k > (SELECT AVG(CAST (Mtotal AS DECIMAL)/Ptotal*100000)
+FROM(
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+WHERE Ano > 1999
+FROM Mortalidade
+GROUP BY Ano)
+) [42000-197]
+2020-11-03 18:27:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT M.ESTADO
+
+FROM
+(SELECT ESTADO,AVG(MORTES100K) AVG_MORTES100K
+FROM MORTALIDADE
+GROUP BY ESTADO) AS M
+WHERE
+M.ANO > 1999
+M[*].AVG_MORTES100K > (SELECT AVG(CAST (MTOTAL AS DECIMAL)/PTOTAL*100000)
+FROM(
+SELECT ANO,SUM(MORTES) MTOTAL,SUM(POPULAÇÃO) PTOTAL
+FROM MORTALIDADE
+GROUP BY ANO)
+) "; SQL statement:
+SELECT M.Estado
+
+FROM
+(SELECT Estado,AVG(Mortes100k) avg_mortes100k
+FROM Mortalidade
+GROUP BY Estado) as M
+WHERE
+M.ano > 1999
+M.avg_mortes100k > (SELECT AVG(CAST (Mtotal AS DECIMAL)/Ptotal*100000)
+FROM(
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+FROM Mortalidade
+GROUP BY Ano)
+) [42000-197]
+2020-11-03 18:28:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT M.ESTADO
+
+FROM
+(SELECT ESTADO,AVG(MORTES100K) AVG_MORTES100K
+FROM MORTALIDADE
+GROUP BY ESTADO) AS M
+WHERE
+M.AVG_MORTES100K > (SELECT AVG(CAST (MTOTAL AS DECIMAL)/PTOTAL*100000)
+FROM(
+SELECT ANO,SUM(MORTES) MTOTAL,SUM(POPULAÇÃO) PTOTAL
+WHERE ANO > 1999
+FROM[*] MORTALIDADE
+GROUP BY ANO)
+) "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, GROUP, HAVING, UNION, MINUS, EXCEPT, INTERSECT, ORDER, OFFSET, FETCH, LIMIT, FOR, )"; SQL statement:
+SELECT M.Estado
+
+FROM
+(SELECT Estado,AVG(Mortes100k) avg_mortes100k
+FROM Mortalidade
+GROUP BY Estado) as M
+WHERE
+M.avg_mortes100k > (SELECT AVG(CAST (Mtotal AS DECIMAL)/Ptotal*100000)
+FROM(
+SELECT Ano,SUM(Mortes) Mtotal,SUM(População) Ptotal
+WHERE Ano > 1999
+FROM Mortalidade
+GROUP BY Ano)
+) [42001-197]

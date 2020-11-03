@@ -52,7 +52,7 @@ Extração e conversão de dados XML usando a API: [![Binder](https://mybinder.o
 
 ### Conjunto de queries:
 
-
+Conjunto preliminar de queries: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GSPAtens/Trabalho_Final-MC536-2s2020/development?filepath=stage03%2Fnotebooks%2Fqueries.ipynb)
 
 ### Arquivos relacionais:
 [Mortes por câncer de pulmão nos EUA de 1968 a 1978, por ano e por estado.](data/lungcancer1968-1978.csv)
