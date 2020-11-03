@@ -1,0 +1,150 @@
+anaconda-client==1.7.2
+anaconda-navigator==1.9.12
+AnyQt==0.0.10
+argon2-cffi @ file:///tmp/build/80754af9/argon2-cffi_1596828493937/work
+async-generator==1.10
+attrs @ file:///tmp/build/80754af9/attrs_1600298409949/work
+backcall==0.2.0
+backports.functools-lru-cache==1.6.1
+backports.tempfile==1.0
+backports.weakref==1.0.post1
+baycomp @ file:///tmp/build/80754af9/baycomp_1594058960602/work
+beakerx==1.4.1
+beautifulsoup4 @ file:///tmp/build/80754af9/beautifulsoup4_1601924105527/work
+bleach @ file:///tmp/build/80754af9/bleach_1600439572647/work
+Bottleneck==1.3.2
+brotlipy==0.7.0
+CacheControl @ file:///tmp/build/80754af9/cachecontrol_1594058963164/work
+certifi==2020.6.20
+cffi @ file:///tmp/build/80754af9/cffi_1600699146221/work
+chardet==3.0.4
+click==7.1.2
+clyent==1.2.2
+commonmark==0.9.1
+conda==4.8.5
+conda-build==3.20.3
+conda-package-handling==1.7.0
+conda-verify==3.4.2
+cryptography @ file:///tmp/build/80754af9/cryptography_1601046815590/work
+cycler==0.10.0
+decorator==4.4.2
+defusedxml==0.6.0
+dictdiffer @ file:///tmp/build/80754af9/dictdiffer_1594059095757/work
+docutils==0.16
+entrypoints==0.3
+et-xmlfile==1.0.1
+filelock==3.0.12
+future==0.18.2
+glob2==0.7
+h11 @ file:///tmp/build/80754af9/h11_1594058940538/work
+h2==3.2.0
+hpack==3.0.0
+httpcore @ file:///tmp/build/80754af9/httpcore_1601996039936/work
+httpx @ file:///tmp/build/80754af9/httpx_1602258256207/work
+hyperframe==5.2.0
+idna @ file:///tmp/build/80754af9/idna_1593446292537/work
+importlib-metadata @ file:///tmp/build/80754af9/importlib-metadata_1602276842396/work
+iniconfig @ file:///tmp/build/80754af9/iniconfig_1602780191262/work
+ipykernel @ file:///tmp/build/80754af9/ipykernel_1596207638929/work/dist/ipykernel-5.3.4-py3-none-any.whl
+ipython @ file:///tmp/build/80754af9/ipython_1598883821407/work
+ipython-genutils==0.2.0
+ipywidgets @ file:///tmp/build/80754af9/ipywidgets_1601490159889/work
+jdcal==1.4.1
+jedi @ file:///tmp/build/80754af9/jedi_1598371611696/work
+jeepney==0.4.3
+Jinja2==2.11.2
+joblib @ file:///tmp/build/80754af9/joblib_1601912903842/work
+json5==0.9.5
+jsonschema @ file:///tmp/build/80754af9/jsonschema_1602607155483/work
+jupyter-client @ file:///tmp/build/80754af9/jupyter_client_1601311786391/work
+jupyter-core==4.6.3
+jupyterlab==2.2.6
+jupyterlab-pygments @ file:///tmp/build/80754af9/jupyterlab_pygments_1601490720602/work
+jupyterlab-server @ file:///tmp/build/80754af9/jupyterlab_server_1594164409481/work
+keyring @ file:///tmp/build/80754af9/keyring_1601490835422/work
+keyrings.alt==4.0.0
+kiwisolver==1.2.0
+libarchive-c==2.9
+llvmlite==0.34.0
+lockfile==0.12.2
+MarkupSafe==1.1.1
+matplotlib @ file:///tmp/build/80754af9/matplotlib-base_1597876319132/work
+mistune==0.8.4
+mkl-fft==1.2.0
+mkl-random==1.1.1
+mkl-service==2.3.0
+more-itertools @ file:///tmp/build/80754af9/more-itertools_1598884071673/work
+msgpack==1.0.0
+navigator-updater==0.2.1
+nbclient @ file:///tmp/build/80754af9/nbclient_1602783176460/work
+nbconvert @ file:///tmp/build/80754af9/nbconvert_1601914830498/work
+nbformat @ file:///tmp/build/80754af9/nbformat_1602783287752/work
+nest-asyncio @ file:///tmp/build/80754af9/nest-asyncio_1601499549014/work
+networkx @ file:///tmp/build/80754af9/networkx_1598376031484/work
+notebook @ file:///tmp/build/80754af9/notebook_1601501575118/work
+numba @ file:///tmp/build/80754af9/numba_1600100669015/work
+numpy @ file:///tmp/build/80754af9/numpy_and_numpy_base_1596233721170/work
+olefile==0.46
+openpyxl @ file:///tmp/build/80754af9/openpyxl_1598113097404/work
+openTSNE @ file:///tmp/build/80754af9/opentsne_1594138692776/work
+orange-canvas-core @ file:///tmp/build/80754af9/orange-canvas-core_1594066201346/work
+orange-widget-base @ file:///tmp/build/80754af9/orange-widget-base_1594068927460/work
+Orange3 @ file:///tmp/build/80754af9/orange3_1594070640761/work
+packaging==20.4
+pandas @ file:///tmp/build/80754af9/pandas_1602088120436/work
+pandocfilters==1.4.2
+parso==0.7.0
+pexpect==4.8.0
+pickleshare==0.7.5
+Pillow @ file:///tmp/build/80754af9/pillow_1602788711040/work
+pkginfo==1.5.0.1
+pluggy==0.13.1
+prometheus-client==0.8.0
+prompt-toolkit @ file:///tmp/build/80754af9/prompt-toolkit_1602688806899/work
+psutil @ file:///tmp/build/80754af9/psutil_1598370257551/work
+ptyprocess==0.6.0
+py @ file:///tmp/build/80754af9/py_1593446248552/work
+py4j @ file:///tmp/build/80754af9/py4j_1599765814100/work
+pycosat==0.6.3
+pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
+Pygments @ file:///tmp/build/80754af9/pygments_1600458456400/work
+pynndescent @ file:///tmp/build/80754af9/pynndescent_1594171481221/work
+pyOpenSSL @ file:///tmp/build/80754af9/pyopenssl_1594392929924/work
+pyparsing==2.4.7
+pyqtgraph @ file:///tmp/build/80754af9/pyqtgraph_1594064840332/work
+pyrsistent @ file:///tmp/build/80754af9/pyrsistent_1600141720057/work
+PySocks==1.7.1
+pytest==0.0.0
+python-dateutil==2.8.1
+python-louvain @ file:///tmp/build/80754af9/python-louvain_1595269350290/work
+pytz==2020.1
+PyYAML==5.3.1
+pyzmq==19.0.2
+QtPy==1.9.0
+requests @ file:///tmp/build/80754af9/requests_1592841827918/work
+rfc3986 @ file:///tmp/build/80754af9/rfc3986_1594058972433/work
+ruamel-yaml==0.15.87
+scikit-learn @ file:///tmp/build/80754af9/scikit-learn_1598376899566/work
+scipy @ file:///tmp/build/80754af9/scipy_1597686649129/work
+SecretStorage==3.1.2
+Send2Trash==1.5.0
+serverfiles==0.3.0
+sip==4.19.13
+six==1.15.0
+sniffio @ file:///tmp/build/80754af9/sniffio_1594058961560/work
+soupsieve==2.0.1
+terminado==0.9.1
+testpath==0.4.4
+threadpoolctl @ file:///tmp/tmp9twdgx9k/threadpoolctl-2.1.0-py3-none-any.whl
+toml @ file:///tmp/build/80754af9/toml_1592853716807/work
+tornado==6.0.4
+tqdm @ file:///tmp/build/80754af9/tqdm_1602185206534/work
+traitlets @ file:///tmp/build/80754af9/traitlets_1602787416690/work
+urllib3 @ file:///tmp/build/80754af9/urllib3_1597086586889/work
+wcwidth @ file:///tmp/build/80754af9/wcwidth_1593447189090/work
+webencodings==0.5.1
+widgetsnbextension==3.5.1
+xlrd==1.2.0
+XlsxWriter @ file:///tmp/build/80754af9/xlsxwriter_1602692860603/work
+xmltodict==0.12.0
+zipp @ file:///tmp/build/80754af9/zipp_1602002379921/work
