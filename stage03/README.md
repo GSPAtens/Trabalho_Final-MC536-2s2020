@@ -46,13 +46,13 @@ Nenhuma destas duas tabelas dos modelo lógico estão normalizada, por conta dos
 2. Pelo esquema da tabela Tabagismo, o campo Estado é redundante com o campo Coordenadas.
 
 ### Programa de extração e conversão de dados:
-Conversão de dados baixados pelo formulário da API (extração manual): [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GSPAtens/Trabalho_Final-MC536-2s2020/development?filepath=stage03%2Fnotebooks%2Flungcancerdataconverter.ipynb)
+Conversão de dados baixados pelo formulário da API (extração manual): [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GSPAtens/Trabalho_Final-MC536-2s2020/main?filepath=stage03%2Fnotebooks%2Flungcancerdataconverter.ipynb)
 
-Extração e conversão de dados XML usando a API: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GSPAtens/Trabalho_Final-MC536-2s2020/development?filepath=stage03%2Fnotebooks%2Flungcancerdataextraction.ipynb)
+Extração e conversão de dados XML usando a API: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GSPAtens/Trabalho_Final-MC536-2s2020/main?filepath=stage03%2Fnotebooks%2Flungcancerdataextraction.ipynb)
 
 ### Conjunto de queries:
 
-Conjunto preliminar de queries: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GSPAtens/Trabalho_Final-MC536-2s2020/development?filepath=stage03%2Fnotebooks%2Fqueries.ipynb)
+Conjunto preliminar de queries: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GSPAtens/Trabalho_Final-MC536-2s2020/main?filepath=stage03%2Fnotebooks%2Fqueries.ipynb)
 
 ### Arquivos relacionais:
 [Mortes por câncer de pulmão nos EUA de 1968 a 1978, por ano e por estado.](data/lungcancer1968-1978.csv)
