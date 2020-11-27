@@ -43,13 +43,13 @@ TABAGISMO(<ins>**EstadoTerritorio**</ins>,<ins>**Ano**</ins>,NuncaFumou,ExFumant
 
 ## Primeiro programa de extração e conversão de dados
 
-[Extração de dados](notebooks/lungcancerdataextraction.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GSPAtens/Trabalho_Final-MC536-2s2020/master?filepath=stage04%2Fnotebooks%2Flungcancerdataextraction.ipynb)
+[Extração de dados](notebooks/lungcancerdataextraction.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GSPAtens/Trabalho_Final-MC536-2s2020/main?filepath=stage04%2Fnotebooks%2Flungcancerdataextraction.ipynb)
 
-[Conversão de dados](notebooks/lungcancerdataconverter.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GSPAtens/Trabalho_Final-MC536-2s2020/master?filepath=stage04%2Fnotebooks%2Flungcancerdataconverter.ipynb)
+[Conversão de dados](notebooks/lungcancerdataconverter.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GSPAtens/Trabalho_Final-MC536-2s2020/main?filepath=stage04%2Fnotebooks%2Flungcancerdataconverter.ipynb)
 
 ## Primeiro conjunto de queries
 
-[Queries SQL](notebooks/queries.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GSPAtens/Trabalho_Final-MC536-2s2020/master?filepath=stage04%2Fnotebooks%2Fqueries.ipynb)
+[Queries SQL](notebooks/queries.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GSPAtens/Trabalho_Final-MC536-2s2020/main?filepath=stage04%2Fnotebooks%2Fqueries.ipynb)
 
 ## Bases de Dados
 
@@ -99,20 +99,20 @@ Cada um dos estados norte-americanos será representado por um nó em um grafo, 
 
 ### Modelo Relacional
 
-[Extração de dados](notebooks/lungcancerdataextraction.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GSPAtens/Trabalho_Final-MC536-2s2020/master?filepath=stage04%2Fnotebooks%2Flungcancerdataextraction.ipynb)
+[Extração de dados](notebooks/lungcancerdataextraction.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GSPAtens/Trabalho_Final-MC536-2s2020/main?filepath=stage04%2Fnotebooks%2Flungcancerdataextraction.ipynb)
 
-[Conversão de dados](notebooks/lungcancerdataconverter.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GSPAtens/Trabalho_Final-MC536-2s2020/master?filepath=stage04%2Fnotebooks%2Flungcancerdataconverter.ipynb)
+[Conversão de dados](notebooks/lungcancerdataconverter.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GSPAtens/Trabalho_Final-MC536-2s2020/main?filepath=stage04%2Fnotebooks%2Flungcancerdataconverter.ipynb)
 
 ## Conjunto de queries de dois modelos
 
 ### SQL:
-[Queries SQL](notebooks/queries.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GSPAtens/Trabalho_Final-MC536-2s2020/master?filepath=stage04%2Fnotebooks%2Fqueries.ipynb)
+[Queries SQL](notebooks/queries.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GSPAtens/Trabalho_Final-MC536-2s2020/main?filepath=stage04%2Fnotebooks%2Fqueries.ipynb)
 
 
 ### Cypher:
 Criando um nó para cada estado-norteamericano:
 ~~~cypher
-LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/ubikuity/List-of-neighboring-states-for-each-US-state/master/usa-states.csv' AS line
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/ubikuity/List-of-neighboring-states-for-each-US-state/main/usa-states.csv' AS line
 CREATE (:State {name: line.StateName, code: line.StateCode})
 ~~~
 ![Nós de estados americanos](assets/statesnodes.png)
@@ -120,7 +120,7 @@ CREATE (:State {name: line.StateName, code: line.StateCode})
 
 Colocando arestas entre estados vizinhos:
 ~~~cypher
-LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/ubikuity/List-of-neighboring-states-for-each-US-state/master/neighbors-states.csv' AS line
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/ubikuity/List-of-neighboring-states-for-each-US-state/main/neighbors-states.csv' AS line
 MATCH (s:State {code: line.StateCode})
 MATCH (d:State {code: line.NeighborStateCode})
 MERGE (s)-[:Neighbor]-(d)
