@@ -64,61 +64,90 @@ Data from "An exploration of the Facebook social networks of smokers and non-smo
 
 Nome do arquivo | Link | Descrição
 ----- | ----- | -----
-`lungcancer1968-1978.txt` | [lungcancer1968-1978.txt](data/raw/lungcancer1968-1978.txt) | `Mortes por câncer de pulmão nos EUA de 1968 a 1978, não processados.`
-`lungcancer1979-1998.txt` | [lungcancer1979-1998.txt](data/raw/lungcancer1979-1998.txt) | `Mortes por câncer de pulmão nos EUA de 1979 a 1998, não processados.`
-`lungcancer1999-2018.txt` | [lungcancer1999-2018.txt](data/raw/lungcancer1999-2018.txt) | `Mortes por câncer de pulmão nos EUA de 1999 a 2018, não processados.`
-`lungcancer1968-1978.csv` | [lungcancer1968-1978.csv](data/processed/lungcancer1968-1978.csv) | `Mortes por câncer de pulmão nos EUA de 1968 a 1978, por ano e por estado.`
-`lungcancer1979-1998.csv` | [lungcancer1979-1998.csv](data/processed/lungcancer1979-1998.csv) | `Mortes por câncer de pulmão nos EUA de 1979 a 1998, por ano e por estado.`
-`lungcancer1999-2018.csv` | [lungcancer1999-2018.csv](data/processed/lungcancer1999-2018.csv) | `Mortes por câncer de pulmão nos EUA de 1999 a 2018, por ano e por estado.`
-`lungcancer.csv` | [lungcancer.csv](data/processed/lungcancer.csv) | `Mortes por câncer de pulmão nos EUA de 1968 a 2018, por ano e por estado`
-`lungcancer-general.csv` | [lungcancer-general.csv](data/processed/lungcancer-general.csv) | `Mortes por câncer de pulmão nos EUA de 1968 a 2018, por ano.`
+lungcancer1968-1978.txt | [lungcancer1968-1978.txt](data/raw/lungcancer1968-1978.txt) | Mortes por câncer de pulmão nos EUA de 1968 a 1978, não processados.
+lungcancer1979-1998.txt | [lungcancer1979-1998.txt](data/raw/lungcancer1979-1998.txt) | Mortes por câncer de pulmão nos EUA de 1979 a 1998, não processados.
+lungcancer1999-2018.txt | [lungcancer1999-2018.txt](data/raw/lungcancer1999-2018.txt) | Mortes por câncer de pulmão nos EUA de 1999 a 2018, não processados.
+lungcancer1968-1978.csv | [lungcancer1968-1978.csv](data/processed/lungcancer1968-1978.csv) | Mortes por câncer de pulmão nos EUA de 1968 a 1978, por ano e por estado.
+lungcancer1979-1998.csv | [lungcancer1979-1998.csv](data/processed/lungcancer1979-1998.csv) | Mortes por câncer de pulmão nos EUA de 1979 a 1998, por ano e por estado.
+lungcancer1999-2018.csv | [lungcancer1999-2018.csv](data/processed/lungcancer1999-2018.csv) | Mortes por câncer de pulmão nos EUA de 1999 a 2018, por ano e por estado.
+lungcancer.csv | [lungcancer.csv](data/processed/lungcancer.csv) | Mortes por câncer de pulmão nos EUA de 1968 a 2018, por ano e por estado
+lungcancer-general.csv | [lungcancer-general.csv](data/processed/lungcancer-general.csv) | Mortes por câncer de pulmão nos EUA de 1968 a 2018, por ano.
 
 
 # Etapa 04 - Análises com o Segundo Modelo Lógico
 
 ## Slides da Apresentação da Etapa
 
-> Coloque um link para o arquivo dos slides da apresentação que estão na pasta `slides`.
+[Slides](slides/Stage04Presentation.pdf)
 
 ## Modelo Conceitual Atualizado
 
-> Coloque aqui a imagem do modelo conceitual atualizado em ER ou UML, como o exemplo a seguir:
-> ![ER Taxi](images/er-taxi.png)
+![Entity Relationship Model](assets/ermodel.png)
 
 ## Modelos Lógicos Atualizados
 
-> Coloque aqui os dois modelos lógicos dos bancos de dados relacionados aos modelos conceituais. O modelo lógico da etapa anterior pode ser copiado ou apresentado revisado. Para o modelo relacional, sugere-se o formato a seguir. Para outros modelos lógicos o formato é livre, pode ser adotado aqueles apresentados em sala.
+### Modelo Relacional
 
-> Exemplo de modelo lógico relacional
-~~~
-PESSOA(_Código_, Nome, Telefone)
-ARMÁRIO(_Código_, Tamanho, Ocupante)
-  Ocupante chave estrangeira -> PESSOA(Código)
-~~~
+MORTALIDADE(<ins>**Estado**</ins>,<ins>**Ano**</ins>,População,Mortes,MortesPor100k,CodigoEstado)
+TABAGISMO(<ins>**EstadoTerritorio**</ins>,<ins>**Ano**</ins>,NuncaFumou,ExFumante,FumaAsVezes,FumaSempre,Coordenadas)
+
+### Modelo Grafos
+Cada um dos estados norte-americanos será representado por um nó em um grafo, e terá arestas para os estados que são vizinhos. Além disso, cada um destes nós terá atributos como População e Mortes por ano.
+![Grafo de estados americanos por vizinhos](assets/statesneighbors.png)
 
 ## Programa de extração e conversão de dados atualizado
 
-> Coloque um link para o arquivo do notebook que executa a extração e conversão de dados. Ele estará dentro da pasta `notebook`. Se por alguma razão o código não for executável no Jupyter, coloque na pasta `src`. Se a extração e conversão envolverem queries executadas atraves de uma interface de um SGBD não executável no Jupyter, como o Cypher, apresente na forma de markdown.
+### Modelo Relacional
+
+[Extração de dados](notebooks/lungcancerdataextraction.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GSPAtens/Trabalho_Final-MC536-2s2020/development?filepath=stage04%2Fnotebooks%2Flungcancerdataextraction.ipynb)
+
+[Conversão de dados](notebooks/lungcancerdataconverter.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GSPAtens/Trabalho_Final-MC536-2s2020/development?filepath=stage04%2Fnotebooks%2Flungcancerdataconverter.ipynb)
 
 ## Conjunto de queries de dois modelos
 
-> Acrescente um link para o arquivo do notebook que executa o segundo conjunto de queries. Ele estará dentro da pasta `notebook`. Se por alguma razão o código não for executável no Jupyter, coloque na pasta `src`. Se as queries forem executadas atraves de uma interface de um SGBD não executável no Jupyter, como o Cypher, apresente na forma de markdown.
-> O link para queries da etapa 3 também deve aparecer aqui e as queries poderão ser revisadas.
+### SQL:
+[Queries SQL](notebooks/queries.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GSPAtens/Trabalho_Final-MC536-2s2020/development?filepath=stage04%2Fnotebooks%2Fqueries.ipynb)
+
+
+### Cypher:
+Criando um nó para cada estado-norteamericano:
+~~~cypher
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/ubikuity/List-of-neighboring-states-for-each-US-state/master/usa-states.csv' AS line
+CREATE (:State {name: line.StateName, code: line.StateCode})
+~~~
+![Nós de estados americanos](assets/statesnodes.png)
+
+
+Colocando arestas entre estados vizinhos:
+~~~cypher
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/ubikuity/List-of-neighboring-states-for-each-US-state/master/neighbors-states.csv' AS line
+MATCH (s:State {code: line.StateCode})
+MATCH (d:State {code: line.NeighborStateCode})
+MERGE (s)-[:Neighbor]-(d)
+~~~
+![Grafo de estados americanos por vizinhos](assets/statesneighbors.png)
 
 ## Bases de Dados
-> Elencar as bases de dados utilizadas no projeto. Trata-se de uma atualização daquelas apresentadas na Etapa 3.
 
-título da base | link | breve descrição
+Título da base | Link | Descrição
 ----- | ----- | -----
-`<título da base>` | `<link para a página da base>` | `<breve descrição da base>`
+CDC WONDER API for Data Query Web Service | [Wonder API](https://wonder.cdc.gov/wonder/help/WONDER-API.html) | Mortalidade nos Estados Unidos |
+Tobacco Use 1995-2010 - Prevalence and Trends: Four Level Smoking Data | [Tobacco Use 1995-2010](https://www.kaggle.com/cdc/tobacco-use) | Registro do uso de tabaco de 1995 até 2010 por estado americano |
+Data from "An exploration of the Facebook social networks of smokers and non-smokers"  | [Social Networks of Smokers and Non-Smokers](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/XMPAUQ) | Parâmetros das contas do Facebook de fumantes e não fumantes
+List of neighboring states for each US state | [List-of-neighboring-states-for-each-US-state](https://github.com/ubikuity/List-of-neighboring-states-for-each-US-state) | Lista de estados americanos e seus vizinhos
 
 
 ## Arquivos de Dados
-> Elencar os arquivos usados no projeto que estão disponíveis no Github do projeto (manter os da Etapa 3 e acrescentar os da Etapa 4).
 
-nome do arquivo | link | breve descrição
+Nome do arquivo | Link | Descrição
 ----- | ----- | -----
-`<nome do arquivo>` | `<link para o arquivo>` | `<breve descrição do arquivo>`
-
-> Os arquivos devem ser colocados na pasta `data`, em subpasta conforme seu papel (externo, interim, processado, raw). A diferença entre externo e raw é que o raw é em formato não adaptado para uso. A pasta `raw` é opcional, pois pode ser substituída pelo link para a base original da seção anterior.
-> Coloque arquivos relacionais (usualmente CSV), XML ou JSON que não estejam disponíveis online e sejam acessados pelo notebook.
+lungcancer1968-1978.txt | [lungcancer1968-1978.txt](data/raw/lungcancer1968-1978.txt) | Mortes por câncer de pulmão nos EUA de 1968 a 1978, não processados.
+lungcancer1979-1998.txt | [lungcancer1979-1998.txt](data/raw/lungcancer1979-1998.txt) | Mortes por câncer de pulmão nos EUA de 1979 a 1998, não processados.
+lungcancer1999-2018.txt | [lungcancer1999-2018.txt](data/raw/lungcancer1999-2018.txt) | Mortes por câncer de pulmão nos EUA de 1999 a 2018, não processados.
+usa-states.csv | [usa-states.csv](data/external/usa-states.csv) | Estados americanos.
+neighbors-states.csv | [neighbors-states.csv](data/external/neighbors-states.csv) | Estados americanos e seus vizinhos.
+lungcancer1968-1978.csv | [lungcancer1968-1978.csv](data/processed/lungcancer1968-1978.csv) | Mortes por câncer de pulmão nos EUA de 1968 a 1978, por ano e por estado.
+lungcancer1979-1998.csv | [lungcancer1979-1998.csv](data/processed/lungcancer1979-1998.csv) | Mortes por câncer de pulmão nos EUA de 1979 a 1998, por ano e por estado.
+lungcancer1999-2018.csv | [lungcancer1999-2018.csv](data/processed/lungcancer1999-2018.csv) | Mortes por câncer de pulmão nos EUA de 1999 a 2018, por ano e por estado.
+lungcancer.csv | [lungcancer.csv](data/processed/lungcancer.csv) | Mortes por câncer de pulmão nos EUA de 1968 a 2018, por ano e por estado
+lungcancer-general.csv | [lungcancer-general.csv](data/processed/lungcancer-general.csv) | Mortes por câncer de pulmão nos EUA de 1968 a 2018, por ano.
