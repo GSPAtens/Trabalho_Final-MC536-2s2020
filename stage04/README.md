@@ -112,7 +112,7 @@ Cada um dos estados norte-americanos será representado por um nó em um grafo, 
 ### Cypher:
 Criando um nó para cada estado-norteamericano:
 ~~~cypher
-LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/ubikuity/List-of-neighboring-states-for-each-US-state/main/usa-states.csv' AS line
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/ubikuity/List-of-neighboring-states-for-each-US-state/master/usa-states.csv' AS line
 CREATE (:State {name: line.StateName, code: line.StateCode})
 ~~~
 ![Nós de estados americanos](assets/statesnodes.png)
@@ -120,13 +120,79 @@ CREATE (:State {name: line.StateName, code: line.StateCode})
 
 Colocando arestas entre estados vizinhos:
 ~~~cypher
-LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/ubikuity/List-of-neighboring-states-for-each-US-state/main/neighbors-states.csv' AS line
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/ubikuity/List-of-neighboring-states-for-each-US-state/master/neighbors-states.csv' AS line
 MATCH (s:State {code: line.StateCode})
 MATCH (d:State {code: line.NeighborStateCode})
 MERGE (s)-[:Neighbor]-(d)
 ~~~
 ![Grafo de estados americanos por vizinhos](assets/statesneighbors.png)
 
+Criando uma projeção nativa:
+~~~cypher
+CALL gds.graph.create(
+    'stateGraph',
+    'State',
+    {
+        Neighbor:{ 
+            orientation: 'UNDIRECTED'
+        } 
+    } 
+)
+~~~
+
+Usando a projeção para detectar comunidades:
+~~~cypher
+CALL gds.louvain.stream('stateGraph')
+YIELD nodeId, communityId
+RETURN gds.util.asNode(nodeId).name AS name, communityId
+ORDER BY communityId ASC
+~~~
+
+Resultado:
+Comunidade | Estados 
+----- | -----
+1 | Illinois, Indiana, Kentucky, Maryland, Michigan, New Jersey, Ohio, Pennsylvania, Virginia, Wisconsin, West Virginia, District of Columbia, Delaware
+2 | Florida, Georgia, Louisiana, Mississippi, North Carolina, South Carolina, Tennessee, Texas, Alabama, Arkansas
+3 | Iowa, Kansas, Minnesota, Missouri, Montana, North Dakota, Nebraska, Oklahoma, South Dakota, Wyoming, Colorado
+4 | Idaho, New Mexico, Nevada, Oregon, Utah, Washington, Alaska, Arizona, California
+5 | Massachusetts, Maine, New Hampshire, New York, Rhode Island, Vermont, Vermont
+
+Salvando a comunidade em cada um dos nós dos estados:
+~~~cypher
+CALL gds.louvain.stream('stateGraph')
+YIELD nodeId, communityId
+MATCH (s:State {name: gds.util.asNode(nodeId).name})
+SET s.community = communityId
+~~~
+
+Salvando o número de mortes por câncer de pulmão em 2018 em cada um dos nós do grafo:
+~~~cypher
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/GSPAtens/Trabalho_Final-MC536-2s2020/main/stage04/data/processed/lungcancer1999-2018.csv' AS line
+MATCH (s:State)
+WHERE line.State = s.name AND line.Year = '2018'
+SET s.lungCancerDeaths = toInteger(line.Deaths)
+SET s.year = toInteger(line.Year)
+~~~
+
+Somando o número de mortes por câncer em 2018 por todos os estados:
+~~~cypher
+MATCH (s:State)
+RETURN (sum(s.lungCancerDeaths))
+~~~
+
+Média de mortes por estado:
+~~~cypher
+MATCH (s:State)
+RETURN (avg(s.lungCancerDeaths))
+~~~
+
+Exportando as análises para um meio externo:
+~~~cypher
+MATCH(s:State)
+RETURN s.code, s.name, s.community, s.lungCancerDeaths, s.year
+~~~
+
+A visualização destas análises pode ser feita usando o resultado da query anterior em programas de visualização de grafos como o Cytoscape/Gephi.
 ## Bases de Dados
 
 Título da base | Link | Descrição
