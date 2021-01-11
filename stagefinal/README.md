@@ -3,8 +3,9 @@
 ## Projeto Câncer de pulmão e tabagismo
 
 ## Equipe Dados de Bancos
-* Vitor Celso Horodynski Alves
-
+* Vitor Celso Horodynski Alves, RA 206953
+* Carlos Marques, RA 214327
+* Gabriel Pereira, RA 216194
 ## Slides da Apresentação da Etapa Final
 
 [Slides](slides/StageFinalPresentation.pdf)
